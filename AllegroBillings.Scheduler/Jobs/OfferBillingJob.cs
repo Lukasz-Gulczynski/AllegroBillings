@@ -4,6 +4,7 @@ using Quartz;
 
 namespace AllegroBillings.Scheduler.Jobs
 {
+    [DisallowConcurrentExecution]
     public class OfferBillingJob : IJob
     {
         private readonly OfferBillingServiceCommand _offerBillingServiceCommand;

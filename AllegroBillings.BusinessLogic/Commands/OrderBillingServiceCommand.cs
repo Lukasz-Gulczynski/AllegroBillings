@@ -19,7 +19,7 @@ namespace AllegroBillingEntries.BussinesLogic.Commands
                 var filters = new Dictionary<string, string>
                 {
                     { "marketplaceId", "allegro-pl" },
-                    { "order.id", orderId },
+                    { "order.id", "39dfb9b0-1667-1667-11ee-a9ed-5cb2e49c7660" },
                     { "limit", "100" },
                     { "offset", "0" }
                 };

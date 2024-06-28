@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
 
@@ -29,7 +30,7 @@ namespace AllegroBillingEntries
                 try
                 {
                     var context = services.GetRequiredService<BillingContext>();
-                    context.Database.EnsureCreated();
+                    context.Database.Migrate();
                 }
                 catch (Exception ex)
                 {
@@ -58,15 +59,20 @@ namespace AllegroBillingEntries
                         options.UseSqlite(context.Configuration.GetConnectionString("DefaultConnection"));
                     });
 
+                    services.AddHttpClient<IBillingService, BillingService>();
+
                     services.AddScoped<IBillingRepository, BillingRepository>();
                     services.AddScoped<IBillingService, BillingService>();
                     services.AddScoped<OfferBillingServiceCommand>();
                     services.AddScoped<OrderBillingServiceCommand>();
+                    services.AddScoped<OfferBillingJob>();
+                    services.AddScoped<OrderBillingJob>();
 
+                    services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
                     services.AddSingleton<IJobFactory, QuartzJobFactory>();
                     services.AddSingleton(provider =>
                     {
-                        var schedulerFactory = new StdSchedulerFactory();
+                        var schedulerFactory = provider.GetRequiredService<ISchedulerFactory>();
                         var scheduler = schedulerFactory.GetScheduler().Result;
                         scheduler.JobFactory = provider.GetService<IJobFactory>();
                         return scheduler;

@@ -23,14 +23,14 @@ namespace AllegroBillings.BusinessLogic.Services
         public async Task<IEnumerable<BillingDto>> FetchBillingEntriesAsync(Dictionary<string, string> queryParams)
         {
             var query = new FormUrlEncodedContent(queryParams);
-            var response = await _httpClient.GetAsync($"{_settings.Endpoint}?{await query.ReadAsStringAsync()}");
+            var response = await _httpClient.GetAsync($"{_settings.GetBillingsEndpoint}?{await query.ReadAsStringAsync()}");
 
             response.EnsureSuccessStatusCode();
 
             var content = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<Dictionary<string, List<BillingDto>>>(content);
 
-            return result["billings"];
+            return result["billingEntries"];
         }
     }
 }
