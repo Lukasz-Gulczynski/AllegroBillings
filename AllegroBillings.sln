@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroBillings", "AllegroBillings\AllegroBillings.csproj", "{64C05248-3E4A-428A-97C9-FCA53A08E21B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroBillings.BusinessLogic", "AllegroBillings.BusinessLogic\AllegroBillings.BusinessLogic.csproj", "{226B52ED-1CA4-4B8E-8D13-DD0B13074E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroBillings.Data", "AllegroBillings.Data\AllegroBillings.Data.csproj", "{1726F803-A464-4FA6-B1C3-8D4AB0198FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroBillings.Contracts", "AllegroBillings.Contracts\AllegroBillings.Contracts.csproj", "{DF2B11E8-E1B4-493A-993E-85E6FA67412B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroBillings.Scheduler", "AllegroBillings.Scheduler\AllegroBillings.Scheduler.csproj", "{4DFBF1D0-4BB4-4A48-A52A-50037E1D53CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{25537DFC-0C5C-4FF4-9745-7703613153EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64C05248-3E4A-428A-97C9-FCA53A08E21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C05248-3E4A-428A-97C9-FCA53A08E21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C05248-3E4A-428A-97C9-FCA53A08E21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C05248-3E4A-428A-97C9-FCA53A08E21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226B52ED-1CA4-4B8E-8D13-DD0B13074E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226B52ED-1CA4-4B8E-8D13-DD0B13074E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226B52ED-1CA4-4B8E-8D13-DD0B13074E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226B52ED-1CA4-4B8E-8D13-DD0B13074E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1726F803-A464-4FA6-B1C3-8D4AB0198FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1726F803-A464-4FA6-B1C3-8D4AB0198FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1726F803-A464-4FA6-B1C3-8D4AB0198FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1726F803-A464-4FA6-B1C3-8D4AB0198FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2B11E8-E1B4-493A-993E-85E6FA67412B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2B11E8-E1B4-493A-993E-85E6FA67412B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2B11E8-E1B4-493A-993E-85E6FA67412B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2B11E8-E1B4-493A-993E-85E6FA67412B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DFBF1D0-4BB4-4A48-A52A-50037E1D53CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DFBF1D0-4BB4-4A48-A52A-50037E1D53CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DFBF1D0-4BB4-4A48-A52A-50037E1D53CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DFBF1D0-4BB4-4A48-A52A-50037E1D53CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25537DFC-0C5C-4FF4-9745-7703613153EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25537DFC-0C5C-4FF4-9745-7703613153EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25537DFC-0C5C-4FF4-9745-7703613153EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25537DFC-0C5C-4FF4-9745-7703613153EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A24FAE2-6D51-434F-8F86-5A20D0D6638B}
+	EndGlobalSection
+EndGlobal
